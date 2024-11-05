@@ -31,7 +31,7 @@ export default function Home() {
         <h1 className="font-extrabold text-4xl md:text-5xl slg:text-6xl lg:text-7xl text-center w-full lg:w-[90%] uppercase mx-auto pt-4">
           CRAFT THE PERFECT POST FOR YOU IN SECONDS!
         </h1>
-        <p className=" text-sm sm:text-base  md:text-lg text-accent">
+        <p className=" text-sm sm:text-base  md:text-lg text-gray-600">
           Just enter your scambled thoughts, and we&apos;ll generate a post that
           captures your emotions and thoughts.
         </p>
