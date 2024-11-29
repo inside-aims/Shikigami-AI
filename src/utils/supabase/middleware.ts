@@ -49,12 +49,13 @@ export const updateSession = async (request: NextRequest) => {
 
     // Check if the request path matches any public route
     const isPublicRoute = publicRoutes.some((route) =>
-      request.nextUrl.pathname.startsWith(route)
+      request.nextUrl.pathname === route
     );
+
 
     // Check if the request path matches any protected route
     const isProtectedRoute = protectedRoutes.some((route) =>
-      request.nextUrl.pathname.startsWith(route)
+      request.nextUrl.pathname === route
     );
 
     // If user is not authenticated and trying to access a protected route, redirect to sign-in
@@ -65,9 +66,9 @@ export const updateSession = async (request: NextRequest) => {
       return NextResponse.redirect(new URL("/login", request.url));
     }
 
-    // Redirect authenticated user from home page to '/feed' (or any default page)
+    // Redirect authenticated user from home page to '/' (or any default page)
     if (
-      (request.nextUrl.pathname === "/login" ) &&
+      isPublicRoute &&
       !user.error
     ) {
       console.log("already authenticated");
