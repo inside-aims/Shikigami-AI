@@ -20,5 +20,4 @@ export const signinSchema = z.object({
             "Password must contain at least one uppercase letter and one number.",
         }
       ),
-    remember: z.boolean().default(false).optional(),
   });

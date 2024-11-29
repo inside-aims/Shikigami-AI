@@ -68,7 +68,7 @@ export const updateSession = async (request: NextRequest) => {
 
     // Redirect authenticated user from home page to '/' (or any default page)
     if (
-      isPublicRoute &&
+      request.nextUrl.pathname === "/login" &&
       !user.error
     ) {
       console.log("already authenticated");

@@ -7,9 +7,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Twitter Bio Generator Built using Next.js",
+  title: "Shikigami AI post Generator powered by Xolace",
   description:
-    "Generate your perfect Twitter bio with the help of AI. Just answer a few questions and let our AI craft a bio that truly represents you.",
+    "Generate your perfect Xolace Post with the help of AI. Just give Shikigami your thoughts and let our AI craft a post that truly represents you.",
 };
 
 export default function Home() {
